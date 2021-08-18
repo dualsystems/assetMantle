@@ -22012,7 +22012,7 @@ log.info(&quot;------After-----&quot; + file.text);</stringProp>
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\RBT\Desktop\Results\final\3users30sec.csv</stringProp>
+          <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
