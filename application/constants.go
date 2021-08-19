@@ -3,6 +3,13 @@
  SPDX-License-Identifier: Apache-2.0
 */
 
-package configurations
+package application
+
+import (
+	"os"
+)
 
 const Name = "AssetMantle"
+const SimAppName = "SimAssetMantle"
+
+var DefaultNodeHome = os.ExpandEnv("$HOME/." + Name)

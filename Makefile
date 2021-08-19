@@ -6,7 +6,7 @@ COMMIT := $(shell git rev-parse --short HEAD)
 build_tags = netgo
 build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=assetMantle \
-		  -X github.com/cosmos/cosmos-sdk/version.ServerName=assetNode \
+		  -X github.com/cosmos/cosmos-sdk/version.ServerName=assetMantle \
 		  -X github.com/cosmos/cosmos-sdk/version.ClientName=assetClient \
 		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
@@ -31,20 +31,16 @@ all: verify build
 
 install:
 ifeq (${OS},Windows_NT)
-	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetClient.exe ./client
-	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetNode.exe ./node
+	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetMantle.exe ./main
 else
-	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetClient ./client
-	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetNode ./node
+	go build -mod=readonly ${BUILD_FLAGS} -o ${GOBIN}/assetMantle ./main
 endif
 
 build:
 ifeq (${OS},Windows_NT)
-	go build  ${BUILD_FLAGS} -o build/assetClient.exe ./client
-	go build  ${BUILD_FLAGS} -o build/assetNode.exe ./node
+	go build  ${BUILD_FLAGS} -o build/assetMantle.exe ./main
 else
-	go build  ${BUILD_FLAGS} -o build/assetClient ./client
-	go build  ${BUILD_FLAGS} -o build/assetNode ./node
+	go build  ${BUILD_FLAGS} -o build/assetMantle ./main
 endif
 
 verify:

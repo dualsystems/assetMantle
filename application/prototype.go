@@ -6,14 +6,13 @@
 package application
 
 import (
-	"github.com/persistenceOne/assetMantle/application/internal/configurations"
 	"github.com/persistenceOne/persistenceSDK/schema/applications/base"
 )
 
 var Prototype = base.NewApplication(
-	configurations.Name,
-	configurations.ModuleBasicManager,
-	configurations.EnabledWasmProposalTypeList,
-	configurations.ModuleAccountPermissions,
-	configurations.TokenReceiveAllowedModules,
+	Name,
+	ModuleBasicManager,
+	MakeEncodingConfig(),
+	EnabledWasmProposalTypeList,
+	ModuleAccountPermissions,
 )
