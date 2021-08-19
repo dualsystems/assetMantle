@@ -44,7 +44,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="ip" elementType="Argument">
             <stringProp name="Argument.name">ip</stringProp>
-            <stringProp name="Argument.value">68.183.93.125</stringProp>
+            <stringProp name="Argument.value">127.0.0.1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
@@ -164,7 +164,7 @@
           </elementProp>
           <elementProp name="Path" elementType="Argument">
             <stringProp name="Argument.name">Path</stringProp>
-            <stringProp name="Argument.value">E://</stringProp>
+            <stringProp name="Argument.value">jMeterTests/</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
