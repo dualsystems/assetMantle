@@ -12,7 +12,7 @@ ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=assetMantle \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 		  -X github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep) \
 
-BUILD_FLAGS += -ldflags "${ldflags}"
+BUILD_FLAGS += -ldflags "${ldflags}" -tags "${build_tags}"
 
 # Go environment variables
 GOBIN = $(shell go env GOPATH)/bin
